@@ -1,2 +1,2 @@
-git reset --hard hash
+git reset --hard <hash>
 git merge --squash HEAD@{1}
