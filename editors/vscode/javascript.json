@@ -1,0 +1,46 @@
+{
+	"console.log": {
+		"prefix": "log",
+		"body": "console.log($1)"
+	},
+	"Export default as": {
+		"prefix": "eda",
+		"body": "export { default as $1 } from './components/$1';"
+	},
+	"Import-export": {
+		"prefix": "ie",
+		"body": [
+			"import $1 from './$1';",
+			"",
+			"export default $1;"
+		]
+	},
+	"React function components": {
+		"prefix": "fc",
+		"body": [
+			"import React from 'react';",
+			"",
+			"export default function $1($2) {",
+			"  return ${3:<div />};",
+			"}"
+		]
+	},
+	"Tap console.log": {
+		"prefix": "taplog",
+		"body": [
+			"tap((${1:x}) => ${2:console.log(${3:x})}),"
+		]
+	},
+	"Subsribe console.log": {
+		"prefix": "sublog",
+		"body": [
+			"subscribe((${1:x}) => ${32console.log(${3:x})});"
+		]
+	},
+	"Reactive prop": {
+		"prefix": "rxprop",
+		"body": [
+			"const $1$ = props$.pipe(map(({ $1 }) => $1))"
+		]
+	}
+}
