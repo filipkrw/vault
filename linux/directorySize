@@ -1,0 +1,2 @@
+# https://askubuntu.com/questions/1224/how-do-i-determine-the-total-size-of-a-directory-folder-from-the-command-line
+du -hs <path>
