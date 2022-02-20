@@ -1,1 +1,1 @@
-git switch --orphan <new branch>
+git switch --orphan <new-branch>

@@ -1,1 +1,1 @@
-conda create --name clone --clone source
+conda create --name <clone-env> --clone <source-env>
