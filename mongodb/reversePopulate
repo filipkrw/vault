@@ -1,0 +1,39 @@
+/**
+ * With `authors` schema: { _id, name } and `books` schema: { _id, name, authorId },
+ * select all authors with all their books.
+ */
+
+// Simple way
+db.authors.aggregate([
+  {
+    $lookup: {
+      from: "books",
+      localField: "_id",
+      foreignField: "authorId",
+      as: "books",
+    },
+  },
+]);
+
+// Equivalent, but more verbose way; supports more complex cases
+db.authors.aggregate([
+  {
+    $lookup: {
+      from: "books",
+      let: { id: "$_id" }, // $_id here is author._id, used in the pipeline below as $$id
+      pipeline: [
+        {
+          $match: {
+            $expr: {
+              $and: [
+                { $eq: ["$authorId", "$$id"] }, // $authorId here is permision.authosrId
+                // possible other conditions here
+              ],
+            },
+          },
+        },
+      ],
+      as: "books",
+    },
+  },
+]);
