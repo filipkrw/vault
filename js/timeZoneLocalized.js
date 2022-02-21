@@ -1,16 +1,16 @@
 function getTimeZone() {
   /*
-		Returns one of the tz database time zones
-		https://www.wikiwand.com/en/List_of_tz_database_time_zones
-	*/
+    Returns one of the tz database time zones
+    https://www.wikiwand.com/en/List_of_tz_database_time_zones
+  */
   return Intl.DateTimeFormat().resolvedOptions().timeZone;
 }
 
 function timeFormatLocalized(timeZone, locale) {
   /*
-		`timeZone` is one of the tz database time zones
-		https://www.wikiwand.com/en/List_of_tz_database_time_zones
-	*/
+    `timeZone` is one of the tz database time zones
+    https://www.wikiwand.com/en/List_of_tz_database_time_zones
+  */
   const locales = [locale, "en"]; // en fallback
 
   const formattedTimeZone = new Intl.DateTimeFormat(locales, {
