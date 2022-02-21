@@ -15,7 +15,7 @@ db.authors.aggregate([
   },
 ]);
 
-// Equivalent, but more verbose way; supports more complex cases
+// Equivalent, but more verbose; supports more complex cases
 db.authors.aggregate([
   {
     $lookup: {
@@ -26,7 +26,7 @@ db.authors.aggregate([
           $match: {
             $expr: {
               $and: [
-                { $eq: ["$authorId", "$$id"] }, // $authorId here is permision.authosrId
+                { $eq: ["$authorId", "$$id"] }, // $authorId here is permision.authorId
                 // possible other conditions here
               ],
             },
