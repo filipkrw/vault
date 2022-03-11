@@ -1,6 +1,8 @@
 {
   "shells": [
-    "zsh"
+    "zsh",
+    "bash",
+    "powershell"
   ],
   "aliases": {
     "tunnel": {
@@ -14,6 +16,12 @@
     },
     "exec:it": {
       "snippet": "docker/execInteractive"
+    },
+    "algomo:build": {
+      "snippet": "algomo/dockerComposeExampleBuild"
+    },
+    "algomo:up": {
+      "snippet": "algomo/dockerComposeExampleUp"
     }
   }
 }

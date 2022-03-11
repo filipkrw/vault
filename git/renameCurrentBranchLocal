@@ -1,0 +1,2 @@
+# https://stackoverflow.com/questions/6591213/how-do-i-rename-a-local-git-branch
+git branch -m <new-name>
