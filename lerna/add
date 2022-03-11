@@ -1,0 +1,1 @@
+lerna add <module> --scope=<package>

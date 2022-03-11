@@ -1,0 +1,16 @@
+tunnel() {
+	lt --port $1
+}
+
+git:reset-branch-remote() {
+	git fetch origin
+git reset --hard origin/$1
+}
+
+git:reset-file() {
+	git checkout HEAD -- $1
+}
+
+exec:it() {
+	docker exec -it $1 $2
+}
