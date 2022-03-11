@@ -17,11 +17,11 @@
     "exec:it": {
       "snippet": "docker/execInteractive"
     },
-    "algomo:build": {
-      "snippet": "algomo/dockerComposeExampleBuild"
-    },
-    "algomo:up": {
+    "platform:up": {
       "snippet": "algomo/dockerComposeExampleUp"
+    },
+    "platform:build": {
+      "snippet": "algomo/dockerComposeExampleBuild"
     }
   }
 }
