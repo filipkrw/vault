@@ -1,0 +1,7 @@
+# Docker compose
+platform: <platform>
+
+# Global (not sure if is working)
+export DOCKER_DEFAULT_PLATFORM=<platform>
+
+# Platforms: linux/amd64, linux/arm64
