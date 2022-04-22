@@ -1,0 +1,43 @@
+> redis-cli
+
+SET name filip
+GET name
+DEL name
+EXISTS name
+
+KEYS * -- show everything in the database
+FLUSHALL -- remove everything
+CLEAR -- clear output
+
+# Expiration
+TTL name -- time to live (-1 means no expiration)
+EXPIRE name 10 -- will expire in 10 seconds
+SETEX name 10 filip -- one-liner
+
+# Lists
+LPUSH pets bojka -- add item to the beginning of the list
+RPUSH pets bojka -- add item to the end of the list
+LRANGE pets 0 -1 -- get all items
+LPOP pets -- remove first item
+RPOP pets -- remove last item
+
+# Sets
+SADD pets bojka -- add item to the set
+SREM pets bojka -- remove item from the set
+SMEMBERS pets -- get all items
+SISMEMBER pets bojka -- check if item is in the set
+
+# Hashes; no nesting allowed
+HSET filip age 26 -- set key to value
+HGET filip age -- get value
+HDEL filip age -- delete key
+HGETALL filip -- get all keys and values
+HEXISTS filip age -- check if key exists
+HKEYS filip -- get all keys
+HVALS filip -- get all values
+HINCRBY filip age 1 -- increment value by 1
+HINCRBYFLOAT filip age 1.5 -- increment value by 1.5
+
+# Streams
+XADD teststream * name Filip -- add item to the stream
+XLEN teststream -- get number of items in the stream

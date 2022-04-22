@@ -1,0 +1,3 @@
+-Xms64m or -Xms64M   // 64 megabytes
+-Xmx1g or -Xmx1G     //  1 gigabyte
+java -Xmx64m -classpath ".:${THE_CLASSPATH}" ${PROGRAM_NAME}

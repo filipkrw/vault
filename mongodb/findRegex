@@ -1,1 +1,3 @@
+# Importand: it doesn't take advantage of case-insensitive indexes
+# https://youtu.be/mHeP5IbozDU
 { field: { $regex: ".*text.*", $options: "i" } }
