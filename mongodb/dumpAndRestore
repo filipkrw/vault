@@ -1,0 +1,2 @@
+mongodump [--db <database>] [--collection <collection>] [--uri=<uri>] --out=<output-path>
+mongorestore [--drop] [--db <database>] [--collection <collection>] [--uri=<uri>] <dump-path>
