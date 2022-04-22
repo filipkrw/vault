@@ -15,10 +15,10 @@ exec:it() {
 	docker exec -it $1 $2
 }
 
-algomo:build() {
-	docker compose -f example-docker-compose.local.yml build ${@:1}
+platform:up() {
+	docker compose -f example-docker-compose.local.yml up ${@:1}
 }
 
-algomo:up() {
-	docker compose -f example-docker-compose.local.yml up ${@:1}
+platform:build() {
+	docker compose -f example-docker-compose.local.yml build ${@:1}
 }

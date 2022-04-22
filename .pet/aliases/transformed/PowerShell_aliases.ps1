@@ -19,12 +19,12 @@ function exec:it($container, $command) {
   Invoke-Expression $expr
 }
 
-function algomo:build() {
-  $expr = "docker compose -f example-docker-compose.local.yml build $($args)"
+function platform:up() {
+  $expr = "docker compose -f example-docker-compose.local.yml up $($args)"
   Invoke-Expression $expr
 }
 
-function algomo:up() {
-  $expr = "docker compose -f example-docker-compose.local.yml up $($args)"
+function platform:build() {
+  $expr = "docker compose -f example-docker-compose.local.yml build $($args)"
   Invoke-Expression $expr
 }
