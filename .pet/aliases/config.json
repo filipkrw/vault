@@ -22,6 +22,9 @@
     },
     "platform:build": {
       "snippet": "algomo/dockerComposeExampleBuild"
+    },
+    "git:current": {
+      "snippet": "git/getCurrentBranchName"
     }
   }
 }

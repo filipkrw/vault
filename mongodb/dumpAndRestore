@@ -1,2 +1,10 @@
 mongodump [--db <database>] [--collection <collection>] [--uri=<uri>] --out=<output-path>
 mongorestore [--drop] [--db <database>] [--collection <collection>] [--uri=<uri>] <dump-path>
+
+# Restore and change database name
+
+mongorestore <...> --nsFrom="oldDbName._" --nsTo="newDbName._"
+
+# Notes
+
+When specifying `--db` argument, the path needs to point to the database folder, not the whole dump

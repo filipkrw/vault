@@ -28,3 +28,8 @@ function platform:build() {
   $expr = "docker compose -f example-docker-compose.local.yml build $($args)"
   Invoke-Expression $expr
 }
+
+function git:current() {
+  $expr = "git rev-parse --abbrev-ref HEAD"
+  Invoke-Expression $expr
+}
