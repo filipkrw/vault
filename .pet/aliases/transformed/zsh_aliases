@@ -1,28 +1,32 @@
-tunnel() {
-	lt --port $1
-}
-
-git:reset-branch-remote() {
-	git fetch origin
-git reset --hard origin/$1
-}
-
-git:reset-file() {
-	git checkout HEAD -- $1
-}
-
 exec:it() {
 	docker exec -it $1 $2
 }
 
 platform:up() {
-	docker compose -f example-docker-compose.local.yml up ${@:1}
+	docker compose -f docker-compose.example.local.yml up ${@:1}
 }
 
 platform:build() {
-	docker compose -f example-docker-compose.local.yml build ${@:1}
+	docker compose -f docker-compose.example.local.yml build ${@:1}
 }
 
 git:current() {
 	git rev-parse --abbrev-ref HEAD
+}
+
+git:reset:remote() {
+	git fetch origin
+git reset --hard origin/$1
+}
+
+git:reset:file() {
+	git checkout HEAD -- $1
+}
+
+git:revert:last() {
+	git reset HEAD~
+}
+
+git:pick() {
+	git cherry-pick $1
 }

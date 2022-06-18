@@ -5,15 +5,6 @@
     "powershell"
   ],
   "aliases": {
-    "tunnel": {
-      "snippet": "misc/localtunnel"
-    },
-    "git:reset-branch-remote": {
-      "snippet": "git/resetBranchToRemote"
-    },
-    "git:reset-file": {
-      "snippet": "git/resetFile"
-    },
     "exec:it": {
       "snippet": "docker/execInteractive"
     },
@@ -25,6 +16,18 @@
     },
     "git:current": {
       "snippet": "git/getCurrentBranchName"
+    },
+    "git:reset:remote": {
+      "snippet": "git/resetBranchToRemote"
+    },
+    "git:reset:file": {
+      "snippet": "git/resetFile"
+    },
+    "git:revert:last": {
+      "snippet": "git/revertLastCommit"
+    },
+    "git:pick": {
+      "snippet": "git/cherryPick"
     }
   }
 }
