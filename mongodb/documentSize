@@ -1,0 +1,10 @@
+# https://www.mongodb.com/docs/manual/reference/operator/aggregation/bsonSize/
+
+db.employees.aggregate([
+  {
+    "$project": {
+      "name": 1,
+      "object_size": { $bsonSize: "$$ROOT" }
+    }
+  }
+])
