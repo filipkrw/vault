@@ -15,7 +15,7 @@ git:current() {
 }
 
 git:reset:remote() {
-	git fetch origin
+	git fetch origin $1
 git reset --hard origin/$1
 }
 

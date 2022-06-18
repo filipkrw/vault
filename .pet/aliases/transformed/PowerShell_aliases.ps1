@@ -19,7 +19,7 @@ function git:current() {
 }
 
 function git:reset:remote($branch) {
-  $expr = "git fetch origin
+  $expr = "git fetch origin $($branch)
 git reset --hard origin/$($branch)"
   Invoke-Expression $expr
 }
@@ -34,7 +34,7 @@ function git:revert:last() {
   Invoke-Expression $expr
 }
 
-function git:pick($commit_hash-from-another-branch) {
-  $expr = "git cherry-pick $($commit_hash-from-another-branch)"
+function git:pick($commit_hash_from_another_branch) {
+  $expr = "git cherry-pick $($commit_hash_from_another_branch)"
   Invoke-Expression $expr
 }

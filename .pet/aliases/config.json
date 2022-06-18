@@ -6,28 +6,28 @@
   ],
   "aliases": {
     "exec:it": {
-      "snippet": "docker/execInteractive"
+      "snippet": "snippets/docker/execInteractive"
     },
     "platform:up": {
-      "snippet": "algomo/dockerComposeExampleUp"
+      "snippet": "snippets/algomo/dockerComposeExampleUp"
     },
     "platform:build": {
-      "snippet": "algomo/dockerComposeExampleBuild"
+      "snippet": "snippets/algomo/dockerComposeExampleBuild"
     },
     "git:current": {
-      "snippet": "git/getCurrentBranchName"
+      "snippet": "snippets/git/getCurrentBranchName"
     },
     "git:reset:remote": {
-      "snippet": "git/resetBranchToRemote"
+      "snippet": "snippets/git/resetBranchToRemote"
     },
     "git:reset:file": {
-      "snippet": "git/resetFile"
+      "snippet": "snippets/git/resetFile"
     },
     "git:revert:last": {
-      "snippet": "git/revertLastCommit"
+      "snippet": "snippets/git/revertLastCommit"
     },
     "git:pick": {
-      "snippet": "git/cherryPick"
+      "snippet": "snippets/git/cherryPick"
     }
   }
 }
