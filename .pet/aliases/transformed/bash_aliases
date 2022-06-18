@@ -30,3 +30,7 @@ git:revert:last() {
 git:pick() {
 	git cherry-pick $1
 }
+
+:s() {
+	pet ${@:1} -hs snippets
+}

@@ -12,5 +12,9 @@ module.exports = {
       relativePath: "../links",
       include: ["*"],
     },
+    {
+      relativePath: "../helpers",
+      include: ["*"],
+    },
   ],
 };

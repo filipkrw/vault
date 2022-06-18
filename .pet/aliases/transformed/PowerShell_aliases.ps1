@@ -38,3 +38,8 @@ function git:pick($commit_hash_from_another_branch) {
   $expr = "git cherry-pick $($commit_hash_from_another_branch)"
   Invoke-Expression $expr
 }
+
+function :s() {
+  $expr = "pet $($args) -hs snippets"
+  Invoke-Expression $expr
+}

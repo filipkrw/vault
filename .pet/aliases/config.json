@@ -28,6 +28,9 @@
     },
     "git:pick": {
       "snippet": "snippets/git/cherryPick"
+    },
+    ":s": {
+      "snippet": "helpers/snippets"
     }
   }
 }
