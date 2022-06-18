@@ -1,0 +1,2 @@
+\s -- match whitespace (spaces, tabs, line breaks)
+\S -- negated \s

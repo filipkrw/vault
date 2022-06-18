@@ -1,2 +1,2 @@
-git fetch origin
+git fetch origin <branch>
 git reset --hard origin/<branch>
