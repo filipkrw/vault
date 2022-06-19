@@ -1,5 +1,6 @@
 # https://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git
 # <commit> can be a commit hash or HEAD~n, where n is a number of previous commits
 # Last specified commit is not included
-git reset --soft <commit> &&
+
+git reset --soft <commit>
 git commit

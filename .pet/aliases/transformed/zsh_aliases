@@ -31,6 +31,20 @@ git:pick() {
 	git cherry-pick $1
 }
 
-:s() {
+:() {
 	pet ${@:1} -hs snippets
+}
+
+git:squash() {
+	# https://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git
+# $1 can be a commit hash or HEAD~n, where n is a number of previous commits
+# Last specified commit is not included
+
+git reset --soft $1
+git commit
+
+}
+
+git:list:until() {
+	git log HEAD...$1~1 --oneline --no-decorate --format="%s"
 }

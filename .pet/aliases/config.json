@@ -29,8 +29,14 @@
     "git:pick": {
       "snippet": "snippets/git/cherryPick"
     },
-    ":s": {
+    ":": {
       "snippet": "helpers/snippets"
+    },
+    "git:squash": {
+      "snippet": "snippets/git/squash"
+    },
+    "git:list:until": {
+      "snippet": "snippets/git/listCommitMessagesUntilCommit"
     }
   }
 }

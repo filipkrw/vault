@@ -39,7 +39,23 @@ function git:pick($commit_hash_from_another_branch) {
   Invoke-Expression $expr
 }
 
-function :s() {
+function :() {
   $expr = "pet $($args) -hs snippets"
+  Invoke-Expression $expr
+}
+
+function git:squash($commit) {
+  $expr = "# https://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git
+# $($commit) can be a commit hash or HEAD~n, where n is a number of previous commits
+# Last specified commit is not included
+
+git reset --soft $($commit)
+git commit
+"
+  Invoke-Expression $expr
+}
+
+function git:list:until($commit_hash) {
+  $expr = "git log HEAD...$($commit_hash) --oneline --no-decorate --format='(%an) %B'"
   Invoke-Expression $expr
 }
