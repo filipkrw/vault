@@ -9,9 +9,6 @@ module.exports = {
     {
       relativePath: "links",
     },
-    {
-      relativePath: "helpers",
-    },
   ],
   aliases: [
     {
