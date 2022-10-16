@@ -43,5 +43,9 @@ module.exports = {
       alias: "git:uncommit",
       relativePath: "snippets/git/revertLastCommit",
     },
+    {
+      alias: "git:unfuck",
+      relativePath: "snippets/git/resetBranchToRemote",
+    },
   ],
 };
