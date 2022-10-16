@@ -47,5 +47,13 @@ module.exports = {
       alias: "git:unfuck",
       relativePath: "snippets/git/resetBranchToRemote",
     },
+    {
+      alias: "exec:sh",
+      relativePath: "snippets/docker/execSh",
+    },
+    {
+      alias: "exec:bash",
+      relativePath: "snippets/docker/execBash",
+    },
   ],
 };
