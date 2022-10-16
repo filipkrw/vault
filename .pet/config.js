@@ -1,15 +1,4 @@
 module.exports = {
-  sources: [
-    {
-      relativePath: "snippets",
-    },
-    {
-      relativePath: "cheatsheets",
-    },
-    {
-      relativePath: "links",
-    },
-  ],
   aliases: [
     {
       alias: "exec:it",
@@ -18,10 +7,6 @@ module.exports = {
     {
       alias: "git:current",
       relativePath: "snippets/git/getCurrentBranchName",
-    },
-    {
-      alias: "git:reset:remote",
-      relativePath: "snippets/git/resetBranchToRemote",
     },
     {
       alias: "git:reset:file",
@@ -34,10 +19,6 @@ module.exports = {
     {
       alias: "git:squash",
       relativePath: "snippets/git/squash",
-    },
-    {
-      alias: "git:list:until",
-      relativePath: "snippets/git/listCommitMessagesUntilCommit",
     },
     {
       alias: "git:uncommit",
@@ -54,6 +35,10 @@ module.exports = {
     {
       alias: "exec:bash",
       relativePath: "snippets/docker/execBash",
+    },
+    {
+      alias: "git:remote:delete",
+      relativePath: "snippets/git/deleteRemoteBranch",
     },
   ],
 };
