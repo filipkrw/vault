@@ -1,0 +1,5 @@
+  simple-server:
+    container_name: simple-server
+    image: crccheck/hello-world
+    ports:
+        - "80:8000"
