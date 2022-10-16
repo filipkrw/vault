@@ -1,4 +1,5 @@
 module.exports = {
+  textEditor: "nvim",
   aliases: [
     {
       alias: "exec:it",
