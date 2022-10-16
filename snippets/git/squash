@@ -1,6 +1,5 @@
 # https://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git
-
-# Notice "~1" after <commit>: <commit> will be included in the squashed commit
+# Notice ~1 after <commit>: <commit> will be included in the squash
 
 git reset --soft <commit>~1
 git commit
