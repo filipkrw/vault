@@ -41,5 +41,33 @@ module.exports = {
       alias: "git:remote:delete",
       relativePath: "snippets/git/deleteRemoteBranch",
     },
+    {
+      alias: "chmodock:get",
+      relativePath: "snippets/bash/getChmodNumerical",
+    },
+    {
+      alias: "git:rebase",
+      relativePath: "snippets/docker/squashAndRebase",
+    },
+    {
+      alias: "dock:up",
+      relativePath: "snippets/docker/composeUp",
+    },
+    {
+      alias: "dock:build",
+      relativePath: "snippets/docker/composeBuild",
+    },
+    {
+      alias: "dock:stop",
+      relativePath: "snippets/docker/stop",
+    },
+    {
+      alias: "dock:restart",
+      relativePath: "snippets/docker/stopAndComposeUp",
+    },
+    {
+      alias: "dock:rebuild",
+      relativePath: "snippets/docker/composeBuildAndUp",
+    },
   ],
 };

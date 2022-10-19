@@ -1,0 +1,1 @@
+docker compose build <args*> && docker compose up <args*>

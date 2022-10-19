@@ -1,0 +1,3 @@
+git:squash <commit>
+git commit -m "Squash"
+git rebase origin/<branch>
