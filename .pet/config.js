@@ -1,15 +1,5 @@
 module.exports = {
-  sources: [
-    {
-      relativePath: "snippets",
-    },
-    {
-      relativePath: "cheatsheets",
-    },
-    {
-      relativePath: "links",
-    },
-  ],
+  textEditor: "nvim",
   aliases: [
     {
       alias: "exec:it",
@@ -18,10 +8,6 @@ module.exports = {
     {
       alias: "git:current",
       relativePath: "snippets/git/getCurrentBranchName",
-    },
-    {
-      alias: "git:reset:remote",
-      relativePath: "snippets/git/resetBranchToRemote",
     },
     {
       alias: "git:reset:file",
@@ -34,10 +20,6 @@ module.exports = {
     {
       alias: "git:squash",
       relativePath: "snippets/git/squash",
-    },
-    {
-      alias: "git:list:until",
-      relativePath: "snippets/git/listCommitMessagesUntilCommit",
     },
     {
       alias: "git:uncommit",
@@ -54,6 +36,38 @@ module.exports = {
     {
       alias: "exec:bash",
       relativePath: "snippets/docker/execBash",
+    },
+    {
+      alias: "git:remote:delete",
+      relativePath: "snippets/git/deleteRemoteBranch",
+    },
+    {
+      alias: "chmodock:get",
+      relativePath: "snippets/bash/getChmodNumerical",
+    },
+    {
+      alias: "git:rebase",
+      relativePath: "snippets/docker/squashAndRebase",
+    },
+    {
+      alias: "dock:up",
+      relativePath: "snippets/docker/composeUp",
+    },
+    {
+      alias: "dock:build",
+      relativePath: "snippets/docker/composeBuild",
+    },
+    {
+      alias: "dock:stop",
+      relativePath: "snippets/docker/stop",
+    },
+    {
+      alias: "dock:restart",
+      relativePath: "snippets/docker/stopAndComposeUp",
+    },
+    {
+      alias: "dock:rebuild",
+      relativePath: "snippets/docker/composeBuildAndUp",
     },
   ],
 };
