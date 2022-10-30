@@ -1,0 +1,25 @@
+# Motions
+hjkl - move
+w - move forward a word
+b - move backward a word
+
+Question: How do I enable relative line numbers?
+
+# Visual mode
+v - enter visual mode
+shift v - enter visual line mode
+
+y - copy
+p - paste
+
+Note: deleted text ends up in paste bucket thing.
+
+u - undo
+ctrl r - redo
+
+Actions can be augmented with numbers, i.e.
+- w3 - move 3 words forward
+- d3w - delete 3 words
+- k10 - move 10 lines up
+- y5d - yank (copy) five lines down
+
