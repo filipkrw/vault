@@ -1,4 +1,5 @@
-module.exports = {
+export default {
+  vaults: [{ relativePath: "daily" }],
   textEditor: "nvim",
   aliases: [
     {
@@ -40,10 +41,6 @@ module.exports = {
     {
       alias: "git:remote:delete",
       relativePath: "snippets/git/deleteRemoteBranch",
-    },
-    {
-      alias: "chmodock:get",
-      relativePath: "snippets/bash/getChmodNumerical",
     },
     {
       alias: "git:rebase",
