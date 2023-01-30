@@ -76,5 +76,13 @@ export default {
       alias: "pet:todo",
       relativePath: "aliases/pet/addTodo",
     },
+    {
+      alias: "log",
+      relativePath: "aliases/algomo/log",
+    },
+    {
+      alias: "inboxomo",
+      relativePath: "aliases/algomo/inbox",
+    },
   ],
 };
