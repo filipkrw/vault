@@ -1,4 +1,0 @@
-git rebase origin/develop
-git checkout --theirs .  # to accept all local changes; would be `--our` for merging
-git add .
-git rebase --continue

@@ -1,23 +1,18 @@
-# Dockerfile
-FROM mongo
-
-# docker-compose
 version: "3"
 services:
   mongodb:
     container_name: mongodb
-    build:
-      context: ./mongodb
-      dockerfile: ./Dockerfile
-    # command: "mongod --replSet rs0"  # Create a replica set with single replica (optional)
+    image: mongo
+    command: "mongod --replSet rs0"
     ports:
-      - "27027:27017"
+      - "27018:27017"
+    healthcheck:
+      test: mongosh --eval "rs.initiate()"
+      start_period: 5s
     volumes:
       - ./mongodb/data:/data/db
       - ./mongodb/backups:/backups
-    # environment:
-    #   MONGO_INITDB_ROOT_USERNAME: user
-    #   MONGO_INITDB_ROOT_PASSWORD: password
 
-# Initialize replica set (optional)
-docker exec -it mongodb mongo --eval "rs.initiate()"
+# Start the service and run:
+docker exec mongodb mongosh --eval "rs.initiate()"
+

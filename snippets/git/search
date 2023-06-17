@@ -1,0 +1,23 @@
+# Show commits that contains the code, then you can: git show <commit_sha>
+git log -S "whatever you want to search for"
+
+# An even easier way to show matches right there on the spot
+git log -S "your search term" -p
+
+# Same as above, except applied to all branches instead of the checked out branch
+git log -S "something" -p --all
+
+# Limit your search to only specific files in a specific directory
+git log -S "something specific" -p -- **/models/user*.py
+
+# Search for a regex instead of a string (note the -G instead of -S)
+git log -G '^alias \w+=".*"$' -p
+
+---
+
+# Show the commit message that contains your search term, you can supply either
+# a string or regular expression with the same flag
+git log --grep "your search term"
+
+# Same as above, except applied to all branches instead of the checked out branch
+git log --grep "something else" --all

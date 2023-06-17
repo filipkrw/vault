@@ -1,0 +1,14 @@
+# https://stackoverflow.com/questions/30590083/how-do-i-rename-both-a-git-local-and-remote-branch-name
+
+# Rename the local branch to the new name
+git branch -m <old_name> <new_name>
+
+# Delete the old branch on remote - where <remote> is, for example, origin
+git push origin --delete <old_name>
+
+# Prevent git from using the old name when pushing in the next step.
+# Otherwise, git will use the old upstream name instead of <new_name>.
+git branch --unset-upstream <new_name>
+
+# Push the new branch to remote
+git push origin <new_name>

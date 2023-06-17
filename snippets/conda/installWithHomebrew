@@ -1,0 +1,2 @@
+brew install --cask anaconda
+/opt/homebrew/anaconda3/bin/conda init zsh

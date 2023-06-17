@@ -2,87 +2,185 @@ export default {
   aliases: [
     {
       alias: "exec:it",
-      relativePath: "snippets/docker/execInteractive",
+      source: {
+        type: "note",
+        relativePath: "snippets/docker/execInteractive",
+      },
     },
     {
       alias: "git:current",
-      relativePath: "snippets/git/getCurrentBranchName",
+      source: {
+        type: "note",
+        relativePath: "snippets/git/getCurrentBranchName",
+      },
     },
     {
       alias: "git:reset:file",
-      relativePath: "snippets/git/resetFile",
+      source: {
+        type: "note",
+        relativePath: "snippets/git/resetFile",
+      },
     },
     {
       alias: "git:pick",
-      relativePath: "snippets/git/cherryPick",
+      source: {
+        type: "note",
+        relativePath: "snippets/git/cherryPick",
+      },
     },
     {
       alias: "git:squash",
-      relativePath: "snippets/git/squash",
+      source: {
+        type: "note",
+        relativePath: "snippets/git/squash",
+      },
     },
     {
       alias: "git:uncommit",
-      relativePath: "snippets/git/revertLastCommit",
+      source: {
+        type: "note",
+        relativePath: "snippets/git/revertLastCommit",
+      },
     },
     {
       alias: "git:unfuck",
-      relativePath: "snippets/git/resetBranchToRemote",
+      source: {
+        type: "note",
+        relativePath: "snippets/git/resetBranchToRemote",
+      },
     },
     {
       alias: "exec:sh",
-      relativePath: "snippets/docker/execSh",
+      source: {
+        type: "note",
+        relativePath: "snippets/docker/execSh",
+      },
     },
     {
       alias: "exec:bash",
-      relativePath: "snippets/docker/execBash",
+      source: {
+        type: "note",
+        relativePath: "snippets/docker/execBash",
+      },
     },
     {
       alias: "git:remote:delete",
-      relativePath: "snippets/git/deleteRemoteBranch",
+      source: {
+        type: "note",
+        relativePath: "snippets/git/deleteRemoteBranch",
+      },
     },
     {
-      alias: "git:rebase",
-      relativePath: "snippets/docker/squashAndRebase",
+      alias: "d:up",
+      source: {
+        type: "note",
+        relativePath: "snippets/docker/composeUp",
+      },
     },
     {
-      alias: "dock:up",
-      relativePath: "snippets/docker/composeUp",
+      alias: "d:build",
+      source: {
+        type: "note",
+        relativePath: "snippets/docker/composeBuild",
+      },
     },
     {
-      alias: "dock:build",
-      relativePath: "snippets/docker/composeBuild",
+      alias: "d:stop",
+      source: {
+        type: "note",
+        relativePath: "snippets/docker/stop",
+      },
     },
     {
-      alias: "dock:stop",
-      relativePath: "snippets/docker/stop",
+      alias: "d:restart",
+      source: {
+        type: "note",
+        relativePath: "snippets/docker/stopAndComposeUp",
+      },
     },
     {
-      alias: "dock:restart",
-      relativePath: "snippets/docker/stopAndComposeUp",
-    },
-    {
-      alias: "dock:rebuild",
-      relativePath: "snippets/docker/composeBuildAndUp",
+      alias: "d:reset",
+      source: {
+        type: "note",
+        relativePath: "snippets/docker/composeBuildAndUp",
+      },
     },
     {
       alias: "no_modules",
-      relativePath: "snippets/bash/deleteNodeModulesRecursive",
+      source: {
+        type: "note",
+        relativePath: "snippets/bash/deleteNodeModulesRecursive",
+      },
     },
     {
-      alias: "retro",
-      relativePath: "aliases/algomo/retro",
+      alias: "chmod:get",
+      source: {
+        type: "note",
+        relativePath: "snippets/bash/getChmodNumerical",
+      },
     },
     {
-      alias: "pet:todo",
-      relativePath: "aliases/pet/addTodo",
+      alias: "git:untrack",
+      source: {
+        type: "note",
+        relativePath: "snippets/git/removeTrackedFileFromIndexGitignore",
+      },
     },
     {
-      alias: "log",
-      relativePath: "aliases/algomo/log",
+      alias: "k",
+      source: {
+        type: "note",
+        relativePath: "snippets/k8s/minikubectl",
+      },
     },
     {
-      alias: "inboxomo",
-      relativePath: "aliases/algomo/inbox",
+      alias: "git:rename",
+      source: {
+        type: "note",
+        relativePath: "snippets/git/renameCurrentBranchLocal",
+      },
+    },
+    {
+      alias: "git:rename:remote",
+      source: {
+        type: "note",
+        relativePath: "snippets/git/renameCurrentBranchRemote",
+      },
+    },
+    {
+      alias: "idea",
+      source: {
+        type: "inline",
+        content: "pet dc daily -t idea <args*>",
+      },
+    },
+    {
+      alias: "git+",
+      source: {
+        type: "inline",
+        content: "git checkout -b <args*>",
+      },
+    },
+    {
+      alias: "boxbox",
+      source: {
+        type: "inline",
+        content: "ssh <args*>",
+      },
+    },
+    {
+      alias: "create-ts-node",
+      source: {
+        type: "note",
+        relativePath: "snippets/starters/createTypeScriptProject",
+      },
+    },
+    {
+      alias: "create-html",
+      source: {
+        type: "note",
+        relativePath: "snippets/starters/createAndHostHtmlPage",
+      },
     },
   ],
 };

@@ -1,0 +1,10 @@
+mkdir <name>
+cd <name>
+npm init -y
+pnpm add -D typescript @types/node ts-node
+pnpm exec tsc --init
+mkdir src
+touch src/index.ts
+echo 'console.log("Hello World");' >> src/index.ts
+npx --yes npm-add-script -k "start" -v "ts-node src/index.ts"
+echo '\nDone! You can run "pnpm start" now.'

@@ -1,5 +1,5 @@
-mongodump [--db <database>] [--collection <collection>] [--uri=<uri>] --out=<output-path>
-mongorestore [--drop] [--db <database>] [--collection <collection>] [--uri=<uri>] <dump-path>
+mongodump [--db=<database>] [--collection=<collection>] [--excludeColletion=<collection>] [--uri=<uri>] --out=<output-path>
+mongorestore [--drop] [--db=<database>] [--collection=<collection>] [--uri=<uri>] <dump-path>
 
 # Restore and change database name
 mongorestore <...> --nsFrom="oldDbName._" --nsTo="newDbName._"
