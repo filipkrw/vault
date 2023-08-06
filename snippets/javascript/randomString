@@ -1,0 +1,5 @@
+import crypto from 'crypto';
+
+// const crypto = require('crypto');
+
+crypto.randomBytes(16).toString('hex');

@@ -1,10 +1,16 @@
 mkdir <name>
 cd <name>
+
 npm init -y
-pnpm add -D typescript @types/node ts-node
+pnpm add -D typescript @types/node ts-node-dev vitest
 pnpm exec tsc --init
+
 mkdir src
-touch src/index.ts
-echo 'console.log("Hello World");' >> src/index.ts
-npx --yes npm-add-script -k "start" -v "ts-node src/index.ts"
-echo '\nDone! You can run "pnpm start" now.'
+echo 'console.log("Hello World");' >> src/main.ts
+echo 'import { expect, test } from "vitest";\n\ntest("2 + 2 = 4", () => {\n  expect(2 + 2).toBe(4);\n});\n' >> src/main.test.ts
+
+npx --yes npm-add-script -k "dev" -v "ts-node-dev src/main.ts"
+npx --yes npm-add-script -k "watch" -v "ts-node-dev --respawn src/main.ts"
+npx --yes npm-add-script --force -k "test" -v "vitest"
+
+echo '\nDone! You can run "pnpm dev", "pnpm watch", or "pnpm test" now.'

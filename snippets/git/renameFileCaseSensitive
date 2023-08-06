@@ -1,2 +1,2 @@
-git mv <file> file.tmp
-git mv file.tmp <file>
+git mv <old> file.tmp
+git mv file.tmp <new>
