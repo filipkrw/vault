@@ -1,0 +1,2 @@
+apollo schema:download types/download.json --endpoint=https://<your store>.myshopify.com/api/graphql --header="X-Shopify-Storefront-Access-Token: <your storefront access token>"
+

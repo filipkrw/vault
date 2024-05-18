@@ -8,9 +8,10 @@ pnpm exec tsc --init
 mkdir src
 echo 'console.log("Hello World");' >> src/main.ts
 echo 'import { expect, test } from "vitest";\n\ntest("2 + 2 = 4", () => {\n  expect(2 + 2).toBe(4);\n});\n' >> src/main.test.ts
+touch .env
 
-npx --yes npm-add-script -k "dev" -v "ts-node-dev src/main.ts"
-npx --yes npm-add-script -k "watch" -v "ts-node-dev --respawn src/main.ts"
+npx --yes npm-add-script -k "dev" -v "set -o allexport && source .env && set +o allexport && ts-node-dev src/main.ts"
+npx --yes npm-add-script -k "watch" -v "set -o allexport && source .env && set +o allexport && ts-node-dev --respawn src/main.ts"
 npx --yes npm-add-script --force -k "test" -v "vitest"
 
 echo '\nDone! You can run "pnpm dev", "pnpm watch", or "pnpm test" now.'

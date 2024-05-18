@@ -1,0 +1,23 @@
+This will strip all user data before sending events to Sentry.
+
+```
+class Sentry {
+  sdk = SentrySDK;
+
+  init() {
+    /**
+     * Only error tracking is enabled, no tracing or session recording.
+     * Additionally, we remove any data that would make it possible to identify the user.
+     */
+    this.sdk.init({
+      dsn: "https://67dcc3892cf129c221f069fe0e4cd8bc@o4505244039512064.ingest.sentry.io/4506835091652608",
+      environment: this.getSentryEnvironment(),
+      beforeSend: (event) => {
+        delete event.request?.headers?.["User-Agent"];
+        delete event.contexts;
+        return event;
+      },
+    });
+  }
+}
+```

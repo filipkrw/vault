@@ -1,0 +1,3 @@
+common_commit_hash=$(git merge-base HEAD <base-branch-name>)
+git checkout $common_commit_hash -- <path-to-file>
+

@@ -1,0 +1,1 @@
+xattr -rd com.apple.quarantine /Library/Frameworks/sfml-window.framework
