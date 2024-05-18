@@ -250,7 +250,7 @@ export default {
       alias: "proxy",
       source: {
         type: "inline",
-        content: "tmux kill-session -t proxy 2>/dev/null; tmux new-session -s proxy \"ssh proxy -R 8080:localhost:<port> 'tail -n 20 -f /var/log/nginx/access.log'\"",
+        content: "tmux kill-session -t proxy 2>/dev/null; tmux new-session -s proxy \"ssh proxy -R 8080:localhost:<port> 'tail -n 100 -f /var/log/nginx/access.log'\"",
       },
     },
     {
