@@ -215,24 +215,21 @@ export default {
       alias: "d:rs",
       source: {
         type: "inline",
-        content:
-          "docker stop <container> && docker compose up <container> <args*>",
+        content: "docker stop <container> && docker compose up <container> <args*>",
       },
     },
     {
       alias: "test:server",
       source: {
         type: "inline",
-        content:
-          "docker exec server yarn workspace @algomo/server test <args*>",
+        content: "docker exec server yarn workspace @algomo/server test <args*>",
       },
     },
     {
       alias: "regen:ps",
       source: {
         type: "inline",
-        content:
-          "docker exec server yarn workspace @algomo/server gen:all && docker restart platform & docker restart server",
+        content: "docker exec server yarn workspace @algomo/server gen:all && docker restart platform & docker restart server",
       },
     },
     {
@@ -253,33 +250,11 @@ export default {
       alias: "proxy",
       source: {
         type: "inline",
-        content: "ssh proxy -R 8080:localhost:<port>",
+        content: "tmux kill-session -t proxy 2>/dev/null; tmux new-session -s proxy \"ssh proxy -R 8080:localhost:<port> 'tail -n 20 -f /var/log/nginx/access.log'\"",
       },
     },
     {
-      alias: "proxyo",
-      source: {
-        type: "inline",
-        content:
-          'tmux new-session -d -s proxy "ssh proxy -R 8080:localhost:<port>"',
-      },
-    },
-    {
-      alias: "proxyc",
-      source: {
-        type: "inline",
-        content: "tmux kill-session -t proxy",
-      },
-    },
-    {
-      alias: "proxya",
-      source: {
-        type: "inline",
-        content: "tmux attach-session -t proxy",
-      },
-    },
-    {
-      alias: "proxys",
+      alias: "nullifnoproxy",
       source: {
         type: "inline",
         content: "tmux list-sessions 2>&1 | grep proxy",
